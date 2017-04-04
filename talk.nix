@@ -176,10 +176,14 @@ in deps
 let
 	lib = import <nixpkgs/lib>;
 	list = [ 1 2 3 ];
-in lib.reverseList list;
+in lib.reverseList list
 
 # Output:
-error: syntax error, unexpected ';', expecting $end, at (string):5:24
+[
+	3,
+	2,
+	1
+]
 
 # User functions
 let
